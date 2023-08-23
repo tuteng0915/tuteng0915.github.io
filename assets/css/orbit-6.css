@@ -36,7 +36,7 @@ a:focus {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .wrapper {
@@ -62,7 +62,7 @@ p {
   color: #fff;
 }
 .sidebar-wrapper .profile-container {
-  padding: 30px;
+  padding: 20px;
   background: rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #fff;
@@ -113,7 +113,7 @@ p {
   margin-bottom: 5px;
 }
 .sidebar-wrapper .education-container .item {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .sidebar-wrapper .education-container .item:last-child {
   margin-bottom: 0;
@@ -216,8 +216,9 @@ p {
   color: #97AAC3;
 }
 .main-wrapper .company {
-  margin-bottom: 10px;
-  color: #97AAC3;
+  margin-bottom: 16px;
+  padding-left: 0px;
+  color: #4F5660;
 }
 .main-wrapper .project-title {
   font-size: 16px;
@@ -231,6 +232,28 @@ p {
 .main-wrapper .projects-section .item {
   margin-bottom: 15px;
 }
+
+.main-wrapper .details {
+  margin-bottom: 5px;
+}
+
+.main-wrapper .details .small-line {
+  margin-bottom: 5px;
+}
+
+.main-wrapper .right-line {
+  text-align: right;
+  margin-bottom: 0px;
+  color: #97AAC3;
+}
+
+.main-wrapper .details .author {
+  color: #779AA3;
+  margin-bottom: 5px;
+}
+
+
+
 
 .skillset .item {
   margin-bottom: 15px;
