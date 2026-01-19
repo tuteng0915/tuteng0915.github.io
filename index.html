@@ -3,189 +3,101 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Academic homepage of Teng Tu (涂腾): multimodal language models, multimedia retrieval, music." />
-  <title>Teng Tu | 涂腾</title>
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <title>Teng Tu (涂腾)</title>
+  <meta name="description" content="Teng Tu (涂腾) — Multimodal Language Models, Multimedia Retrieval, Music-Language Modeling." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="topbar" id="top">
-    <div class="container topbar__inner">
-      <div class="brand">
-        <div class="brand__title">涂腾 <span class="muted">/</span> Teng Tu</div>
-        <div class="brand__subtitle" id="headerSubtitle">Loading…</div>
-      </div>
-
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__name" id="brandName">Teng Tu</span>
+      </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#activities">Activities</a>
-        <a href="#honors">Honors</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div class="nav__menu" id="navMenu">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+        </div>
       </nav>
-
-      <div class="actions">
-        <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span class="btn__icon" aria-hidden="true">◐</span>
-          <span class="btn__label">Theme</span>
-        </button>
-      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" id="about">
       <div class="container hero__inner">
-        <div>
-          <h1 class="hero__title">
-            Teng Tu <span class="muted">(涂腾)</span>
-          </h1>
-          <p class="hero__lead" id="heroLead">Loading…</p>
-
-          <div class="chiprow" id="chipRow"></div>
-
-          <div class="cta" id="ctaRow"></div>
+        <div class="hero__photo">
+          <img id="profilePhoto" alt="Profile photo" loading="lazy" />
+          <div class="hero__photoHint">Drop your photo at <code>assets/img/profile.jpg</code></div>
         </div>
 
-        <div class="hero__card" role="region" aria-label="Quick facts">
-          <div class="card">
-            <div class="card__title">Quick Facts</div>
-            <div class="card__body" id="quickFacts">Loading…</div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="hero__content">
+          <h1 class="hero__title" id="nameHeading">Teng Tu <span class="hero__zh" id="nameZh">(涂腾)</span></h1>
+          <p class="hero__headline" id="headline">Multimodal Language Models · Multimedia Retrieval · Music-Language Modeling</p>
 
-    <section class="section" id="about">
-      <div class="container">
-        <h2 class="section__title">About</h2>
-        <div class="grid2">
-          <div class="card">
-            <div class="card__body" id="aboutText">Loading…</div>
-          </div>
-          <div class="card">
-            <div class="card__title">Focus</div>
-            <div class="card__body">
-              <ul class="list" id="focusList"></ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="hero__about" id="aboutText"></div>
 
-    <section class="section" id="research">
-      <div class="container">
-        <h2 class="section__title">Research</h2>
-        <div class="card">
-          <div class="card__body">
-            <div class="grid3" id="researchCards"></div>
-          </div>
+          <div class="hero__links" id="quickLinks" aria-label="Links"></div>
         </div>
       </div>
     </section>
 
     <section class="section" id="publications">
       <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">Publications</h2>
-          <div class="toolbar">
-            <button class="btn btn--small btn--ghost" id="pubToggleSelected" type="button" aria-pressed="true">Selected</button>
-            <button class="btn btn--small btn--ghost" id="pubToggleAll" type="button" aria-pressed="false">All</button>
+        <div class="section__header">
+          <h2>Publications</h2>
+          <div class="segmented" role="tablist" aria-label="Publications filter">
+            <button class="segmented__btn is-active" id="pubTabPeer" role="tab" aria-selected="true">Peer‑reviewed</button>
+            <button class="segmented__btn" id="pubTabUnder" role="tab" aria-selected="false">Under review / preprint</button>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card__body">
-            <div class="publist" id="pubList">Loading…</div>
-          </div>
-        </div>
-
-        <div class="note muted" id="preprintNote"></div>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="container">
-        <h2 class="section__title">Experience</h2>
-        <div class="timeline" id="expTimeline">Loading…</div>
+        <div class="pubs" id="pubList"></div>
       </div>
     </section>
 
     <section class="section" id="education">
       <div class="container">
-        <h2 class="section__title">Education</h2>
-        <div class="card">
-          <div class="card__body" id="eduList">Loading…</div>
-        </div>
+        <h2>Education</h2>
+        <div class="timeline" id="eduList"></div>
       </div>
     </section>
 
-
-    <section class="section" id="activities">
+    <section class="section" id="experience">
       <div class="container">
-        <h2 class="section__title">Activities</h2>
-        <div class="timeline" id="actTimeline">Loading…</div>
-      </div>
-    </section>
-
-    <section class="section" id="honors">
-      <div class="container">
-        <h2 class="section__title">Honors</h2>
-        <div class="card">
-          <div class="card__body" id="honorList">Loading…</div>
-        </div>
+        <h2>Experience</h2>
+        <div class="timeline" id="expList"></div>
       </div>
     </section>
 
     <section class="section" id="skills">
       <div class="container">
-        <h2 class="section__title">Skills</h2>
-        <div class="card">
-          <div class="card__body" id="skillGrid">Loading…</div>
-        </div>
+        <h2>Skills</h2>
+        <div class="skills" id="skillsGrid"></div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section" id="honors">
       <div class="container">
-        <h2 class="section__title">Contact</h2>
-        <div class="grid2">
-          <div class="card">
-            <div class="card__title">Links</div>
-            <div class="card__body">
-              <div class="contact" id="contactLinks">Loading…</div>
-              <div class="muted small" style="margin-top:12px;">
-                Tip: To update info, edit <code>data/site.json</code> and push to GitHub.
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__title">Download</div>
-            <div class="card__body">
-              <p class="muted" style="margin-top:0;">CV/PDF page will be added later. For now we focus on the homepage design.</p>
-              <div class="cta">
-                <a class="btn" href="#top">Back to top</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2>Honors</h2>
+        <div class="honors" id="honorsList"></div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span id="footerName">Teng Tu</span>
+        <span class="footer__sep">·</span>
+        <span id="footerYear"></span>
+      </div>
+    </footer>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="muted small">© <span id="year"></span> Teng Tu (涂腾). Built with plain HTML/CSS/JS for GitHub Pages.</div>
-      <a class="muted small" href="#top">Top ↑</a>
-    </div>
-  </footer>
-
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

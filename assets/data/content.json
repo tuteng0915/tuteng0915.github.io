@@ -1,0 +1,182 @@
+{
+  "profile": {
+    "name_en": "Teng Tu",
+    "name_zh": "涂腾",
+    "headline": "Multimodal Language Models · Multimedia Retrieval · Music-Language Modeling",
+    "affiliation": "Ph.D. student, National University of Singapore",
+    "location": "Singapore",
+    "photo": {
+      "src": "assets/img/profile.jpg",
+      "placeholder": "assets/img/profile-placeholder.svg",
+      "alt": "Profile photo placeholder"
+    },
+    "about": [
+      "Hi! I’m Teng Tu (涂腾), a Ph.D. student at the National University of Singapore. My research spans multimodal language models and multimedia information retrieval, with ongoing work on music-language modeling that unifies symbolic and waveform representations.",
+      "Outside of research, I enjoy travel photography, building small creative demos, and writing."
+    ],
+    "links": [
+      {"label": "Website", "url": "https://tuteng0915.github.io"},
+      {"label": "GitHub", "url": "https://github.com/tuteng0915"},
+      {"label": "LinkedIn", "url": "https://www.linkedin.com/in/teng-tu-4445b132a/"},
+      {"label": "Google Scholar", "url": "https://scholar.google.com/citations?user=Hik8xakAAAAJ"},
+      {"label": "Email (NUS)", "url": "mailto:e1216284@u.nus.edu"},
+      {"label": "Email (Personal)", "url": "mailto:tuteng0915@gmail.com"},
+      {"label": "Phone (SG)", "url": "tel:+6580672503"},
+      {"label": "Phone (CN)", "url": "tel:+8618612970915"}
+    ]
+  },
+  "publications": {
+    "peer_reviewed": [
+      {
+        "title": "Integrating Symbolic and Waveform Music into Large Language Models",
+        "venue": "MMM 2026 (International Conference on Multimedia Modeling)",
+        "year": "2026",
+        "authors": "Teng Tu, Xiaohao Liu, Yunshan Ma, Ji Qi, Tat-Seng Chua",
+        "links": [
+          {"label": "PDF", "url": "assets/papers/UniMuLM_MMM2026.pdf"},
+          {"label": "Accepted papers", "url": "https://mmm2026.cz/acceptedPapers.html"}
+        ]
+      },
+      {
+        "title": "MusicSem: A Semantically Rich Language-Audio Dataset of Organic Musical Discourse",
+        "venue": "(OpenReview preprint / venue TBA)",
+        "year": "2025",
+        "authors": "Rebecca Salganik, Teng Tu, Fei-Yueh Chen, Xiaohao Liu, Kaifeng Lu, Ethan Luvisia, Zhiyao Duan, Guillaume Salha-Galvan, Anson Kahng, Yunshan Ma, Jian Kang",
+        "links": [
+          {"label": "OpenReview", "url": "https://openreview.net/pdf?id=dJd6QxF2Ze"}
+        ]
+      },
+      {
+        "title": "ContextCam: Bridging Context Awareness with Creative Human-AI Image Co-Creation",
+        "venue": "CHI 2024",
+        "year": "2024",
+        "authors": "Xianzhe Fan, Zihan Wu, Chun Yu, Fenggui Rao, Weinan Shi, Teng Tu",
+        "links": []
+      },
+      {
+        "title": "GOAL: A Challenging Knowledge-grounded Video Captioning Benchmark for Real-time Soccer Commentary Generation",
+        "venue": "CIKM 2023",
+        "year": "2023",
+        "authors": "Ji Qi, Jifan Yu, Teng Tu, Kunyu Gao, Yifan Xu, Xinyu Guan, Xiaozhi Wang, Bin Xu, Lei Hou, Juanzi Li, Jie Tang",
+        "links": []
+      },
+      {
+        "title": "CogKR: Cognitive Graph for Multi-hop Knowledge Reasoning",
+        "venue": "TKDE 2021",
+        "year": "2021",
+        "authors": "Zhengxiao Du, Chang Zhou, Jiangchao Yao, Teng Tu, Letian Cheng, Hongxia Yang, Jingren Zhou",
+        "links": []
+      }
+    ],
+    "under_review": [
+      {
+        "title": "Unified Music-Language Model for Symbolic and Waveform Integration",
+        "venue": "Under Review",
+        "year": "2024",
+        "authors": "Teng Tu, Xiaohao Liu, Yunshan Ma, Ji Qi, Tat-Seng Chua",
+        "links": [
+          {"label": "OpenReview", "url": "https://openreview.net/forum?id=4GJVU31mF7"}
+        ]
+      },
+      {
+        "title": "Enhancing Dynamics Modeling in Video-to-Music Generation",
+        "venue": "Under Review",
+        "year": "2024",
+        "authors": "Xiaohao Liu, Teng Tu, Yunshan Ma, Tat-Seng Chua",
+        "links": [
+          {"label": "Project", "url": "https://dyvim-demo.vercel.app/"}
+        ]
+      }
+    ]
+  },
+  "education": [
+    {
+      "school": "National University of Singapore (NUS)",
+      "location": "Singapore",
+      "degree": "Ph.D. in Integrative Sciences and Engineering (ISEP)",
+      "dates": "Aug 2025 – Present",
+      "details": ["Host: School of Computing"]
+    },
+    {
+      "school": "National University of Singapore (NUS)",
+      "location": "Singapore",
+      "degree": "M.Sc. in Computing (Artificial Intelligence)",
+      "dates": "Aug 2023 – Jan 2025",
+      "details": ["GPA: 3.76", "Supervisor: Prof. Tat-Seng Chua"]
+    },
+    {
+      "school": "Tsinghua University (THU)",
+      "location": "Beijing, China",
+      "degree": "B.Sc. in Computer Science and Technology",
+      "dates": "Sep 2019 – Jun 2023",
+      "details": ["GPA: 3.74", "Advisor: Prof. Jie Tang"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Researcher, NExT++ Research Center (NUS)",
+      "dates": "Jan 2024 – Present",
+      "location": "Singapore",
+      "highlights": [
+        "Multimodal language models and multimedia retrieval.",
+        "Music-language modeling bridging symbolic and waveform representations."
+      ]
+    },
+    {
+      "title": "Research Intern, Knowledge Engineering Group (Tsinghua University)",
+      "dates": "Nov 2020 – Jun 2023",
+      "location": "Beijing, China",
+      "highlights": [
+        "NLP, multimodal information processing, and knowledge graphs.",
+        "Contributed to GOAL (CIKM 2023), CogKR (TKDE 2021), and ContextCam (CHI 2024)."
+      ]
+    },
+    {
+      "title": "Multimodal Intern, Zhipu AI",
+      "dates": "Jun 2023 – Sep 2023",
+      "location": "Beijing, China",
+      "highlights": [
+        "Improved a visual tokenizer for adaptive aspect ratios across products.",
+        "Contributed to multiple patent disclosures."
+      ]
+    },
+    {
+      "title": "AI Intern, Kuaishou",
+      "dates": "Jun 2022 – Aug 2022",
+      "location": "Beijing, China",
+      "highlights": [
+        "Built a knowledge-based video Q&A system leveraging multimodal knowledge graphs."
+      ]
+    },
+    {
+      "title": "NLP Intern, Fourth Paradigm",
+      "dates": "Jul 2021 – Aug 2021",
+      "location": "Beijing, China",
+      "highlights": [
+        "Explored knowledge extraction and graph link prediction; proposed product improvements."
+      ]
+    }
+  ],
+  "honors": [
+    {"title": "Academic Excellence Scholarship", "org": "Tsinghua University", "year": "2023"},
+    {"title": "Social Work Excellence Scholarship", "org": "Tsinghua University", "year": "2023"}
+  ],
+  "skills": [
+    {
+      "group": "ML / LLM",
+      "items": ["PyTorch", "Hugging Face (Transformers/Trainer)", "DeepSpeed", "LoRA / Adapters", "Distributed training", "Contrastive learning"]
+    },
+    {
+      "group": "Multimodal & Music",
+      "items": ["Multimedia retrieval", "RAG-style pipelines", "Audio-text alignment", "Symbolic music (ABC/MIDI)", "Waveform modeling", "Music understanding & generation"]
+    },
+    {
+      "group": "Systems / Engineering",
+      "items": ["Linux", "Git", "Docker", "Shell", "CUDA ecosystem", "Experiment debugging & profiling"]
+    },
+    {
+      "group": "Web & Demos",
+      "items": ["Gradio", "React", "HTML/CSS/JS", "Django", "Vercel deployment"]
+    }
+  ]
+}
