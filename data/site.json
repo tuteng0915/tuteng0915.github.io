@@ -1,0 +1,318 @@
+{
+  "header_subtitle": "Ph.D. Student · National University of Singapore",
+  "hero_lead": "I work on multimodal language models and multimedia retrieval, with a recent focus on bridging symbolic and waveform music representations.",
+  "affiliation": "National University of Singapore (NUS)",
+  "location": "Singapore",
+  "research_area": "Multimodal LMs · Multimedia IR · Music",
+  "keywords": [
+    "Multimodal LMs",
+    "Multimedia Retrieval",
+    "Music Understanding",
+    "Music Generation",
+    "Knowledge Graphs"
+  ],
+  "cta": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/tuteng0915"
+    },
+    {
+      "label": "Google Scholar",
+      "href": "https://scholar.google.com/citations?user=Hik8xakAAAAJ&hl=zh-CN"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:tuteng0915@gmail.com"
+    }
+  ],
+  "about_html": "<p>Hi! I am <b>Teng Tu (涂腾)</b>, a Ph.D. student at the <b>National University of Singapore</b>. My research spans <b>multimodal language models</b> and <b>multimedia information retrieval</b>, with ongoing work on <b>music-language modeling</b> that unifies symbolic and waveform representations.</p>",
+  "focus": [
+    "Learning representations that align dynamics across modalities (text / audio / music / video)",
+    "Retrieval + generation systems (multimodal RAG)",
+    "Structured music modeling across multiple granularities"
+  ],
+  "research_cards": [
+    {
+      "title": "Music-Language Modeling",
+      "desc": "Unifying symbolic + waveform music for knowledge, understanding and generation.",
+      "tags": [
+        "symbolic",
+        "waveform",
+        "alignment"
+      ],
+      "links": []
+    },
+    {
+      "title": "Multimodal Retrieval",
+      "desc": "Multimodal representations and retrieval for downstream reasoning and QA.",
+      "tags": [
+        "MM-RAG",
+        "embedding"
+      ],
+      "links": []
+    },
+    {
+      "title": "Knowledge + Reasoning",
+      "desc": "Knowledge graphs and multi-hop reasoning; benchmark construction.",
+      "tags": [
+        "KG",
+        "reasoning"
+      ],
+      "links": []
+    }
+  ],
+  "publications": [
+    {
+      "selected": true,
+      "title": "GOAL: A Challenging Knowledge-grounded Video Captioning Benchmark for Real-time Soccer Commentary Generation",
+      "authors": "Ji Qi, Jifan Yu, Teng Tu, Kunyu Gao, Yifan Xu, Xinyu Guan, Xiaozhi Wang, Yuxiao Dong, Bin Xu, Lei Hou, Juanzi Li, Jie Tang, Weidong Guo, Hui Liu, Yu Xu",
+      "venue": "CIKM",
+      "year": 2023,
+      "links": [
+        {
+          "label": "arXiv",
+          "href": "https://arxiv.org/abs/2303.14655"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/THU-KEG/goal"
+        },
+        {
+          "label": "ACM DL",
+          "href": "https://doi.org/10.1145/3583780.3615120"
+        }
+      ]
+    },
+    {
+      "selected": true,
+      "title": "CogKR: Cognitive Graph for Multi-hop Knowledge Reasoning",
+      "authors": "Zhengxiao Du, Chang Zhou, Jiangchao Yao, Teng Tu, Letian Cheng, Hongxia Yang, Jingren Zhou",
+      "venue": "IEEE TKDE",
+      "year": 2021,
+      "links": [
+        {
+          "label": "PDF",
+          "href": "https://keg.cs.tsinghua.edu.cn/jietang/publications/TKDE21-Du-et-al-CogKR.pdf"
+        }
+      ]
+    },
+    {
+      "selected": true,
+      "title": "ContextCam: Bridging Context Awareness with Creative Human-AI Image Co-Creation",
+      "authors": "Xianzhe Fan, Zihan Wu, Chun Yu, Fenggui Rao, Weinan Shi, Teng Tu",
+      "venue": "CHI",
+      "year": 2024,
+      "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3613904.3642129"
+        }
+      ]
+    }
+  ],
+  "preprints": [
+    {
+      "title": "Unified Music-Language Model for Symbolic and Waveform Integration",
+      "note": "Under Review",
+      "authors": "Teng Tu, Xiaohao Liu, Yunshan Ma, Ji Qi, Tat-Seng Chua"
+    },
+    {
+      "title": "Enhancing Dynamics Modeling in Video-to-Music Generation",
+      "note": "Under Review",
+      "authors": "Xiaohao Liu, Teng Tu, Yunshan Ma, Tat-Seng Chua"
+    }
+  ],
+  "experience": [
+    {
+      "dates": "Jan 2024 – Present",
+      "role": "Researcher / Research Intern",
+      "org": "NExT Research Center, National University of Singapore",
+      "focus": "Multimodal language models · Multimedia information retrieval",
+      "bullets": [
+        "Work on unified music-language modeling and multimodal retrieval",
+        "Lead experimentation and writing for ongoing projects"
+      ]
+    },
+    {
+      "dates": "Nov 2020 – Jun 2023",
+      "role": "Research Intern",
+      "org": "Knowledge Engineering Group (KEG), Tsinghua University",
+      "focus": "NLP · Knowledge graphs · Multimodal information processing",
+      "bullets": [
+        "Benchmark construction and baseline systems",
+        "Knowledge reasoning models and evaluations"
+      ]
+    },
+    {
+      "dates": "Jun 2023 – Sep 2023",
+      "role": "Multimodal Intern",
+      "org": "Zhipu AI",
+      "focus": "Vision-language / visual tokenizer",
+      "bullets": [
+        "Improved visual tokenizer and contributed to patent drafting"
+      ]
+    },
+    {
+      "dates": "Jun 2022 – Aug 2022",
+      "role": "AI Intern",
+      "org": "Kuaishou",
+      "focus": "Multimodal KG + retrieval",
+      "bullets": [
+        "Built a pipeline for natural-language query to knowledge-based video retrieval"
+      ]
+    },
+    {
+      "dates": "Jul 2021 – Aug 2021",
+      "role": "NLP Intern",
+      "org": "Fourth Paradigm",
+      "focus": "Knowledge extraction · Graph link prediction",
+      "bullets": [
+        "Explored solutions in academia and industry; contributed product improvement suggestions"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "National University of Singapore",
+      "degree": "Ph.D. in Integrative Sciences and Engineering",
+      "dates": "Aug 2025 – Present",
+      "gpa": "",
+      "extra": []
+    },
+    {
+      "school": "National University of Singapore",
+      "degree": "M.Sc. in Computing (Artificial Intelligence)",
+      "dates": "Aug 2023 – Jan 2025",
+      "gpa": "3.76",
+      "extra": [
+        "Supervisor: Prof. Tat-Seng Chua"
+      ]
+    },
+    {
+      "school": "Tsinghua University",
+      "degree": "B.Sc. in Computer Science and Technology",
+      "dates": "Sep 2019 – Jun 2023",
+      "gpa": "3.74",
+      "extra": [
+        "Advisor: Prof. Jie Tang"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "label": "Website",
+      "value": "tuteng0915.github.io",
+      "href": "https://tuteng0915.github.io"
+    },
+    {
+      "label": "GitHub",
+      "value": "github.com/tuteng0915",
+      "href": "https://github.com/tuteng0915"
+    },
+    {
+      "label": "Scholar",
+      "value": "Google Scholar",
+      "href": "https://scholar.google.com/citations?user=Hik8xakAAAAJ&hl=zh-CN"
+    },
+    {
+      "label": "Email",
+      "value": "e1216284@u.nus.edu",
+      "href": "mailto:e1216284@u.nus.edu"
+    },
+    {
+      "label": "Email",
+      "value": "tuteng0915@gmail.com",
+      "href": "mailto:tuteng0915@gmail.com"
+    },
+    {
+      "label": "Email",
+      "value": "leotuteng@126.com",
+      "href": "mailto:leotuteng@126.com"
+    },
+    {
+      "label": "Email",
+      "value": "tut19@tsinghua.org.cn",
+      "href": "mailto:tut19@tsinghua.org.cn"
+    },
+    {
+      "label": "Phone",
+      "value": "+65 8067 2503",
+      "href": "tel:+6580672503"
+    },
+    {
+      "label": "Phone",
+      "value": "+86 18612970915",
+      "href": "tel:+8618612970915"
+    }
+  ],
+  "activities": [
+    {
+      "dates": "Jun 2021 – Sep 2022",
+      "role": "Head of Design / Publicity Team",
+      "org": "Department of Computer Science, Tsinghua University",
+      "bullets": [
+        "Led a team to design key visuals and promotional materials for ~6 major departmental events (orientations, graduations, festivals)",
+        "Coordinated visual storytelling and photography for department-wide activities; accumulated ~30k views on the official account"
+      ]
+    },
+    {
+      "dates": "Apr 2023 – Sep 2023",
+      "role": "Lead, Generative AI Research Group",
+      "org": "Tsinghua University (interdisciplinary student initiative)",
+      "bullets": [
+        "Organized interdisciplinary teams across CS and Fine Arts for generative AI tools and discussions",
+        "Led technical sharing salons and AI art competitions to foster collaboration"
+      ]
+    }
+  ],
+  "honors": [
+    {
+      "year": 2023,
+      "title": "Academic Excellence Scholarship",
+      "org": "Tsinghua University"
+    },
+    {
+      "year": 2023,
+      "title": "Social Work Excellence Scholarship",
+      "org": "Tsinghua University"
+    }
+  ],
+  "skills": {
+    "Programming": [
+      "Python",
+      "C++",
+      "C#",
+      "Java",
+      "MATLAB",
+      "Shell"
+    ],
+    "ML/AI": [
+      "PyTorch",
+      "TensorFlow",
+      "DeepSpeed",
+      "Hugging Face",
+      "NumPy",
+      "Pandas"
+    ],
+    "Web": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Django",
+      "Gradio"
+    ],
+    "Media": [
+      "ABC notation",
+      "Photoshop",
+      "Lightroom",
+      "Premiere"
+    ],
+    "Tools": [
+      "Git",
+      "Docker",
+      "MySQL",
+      "LaTeX"
+    ]
+  }
+}
