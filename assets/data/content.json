@@ -164,11 +164,11 @@
   "skills": [
     {
       "group": "ML / LLM",
-      "items": ["PyTorch", "Hugging Face (Transformers/Trainer)", "DeepSpeed", "LoRA / Adapters", "Distributed training", "Contrastive learning"]
+      "items": ["PyTorch", "Hugging Face (Transformers/Trainer)", "DeepSpeed", "vLLM", "LoRA / Adapters", "Distributed training", "Contrastive learning"]
     },
     {
       "group": "Multimodal & Music",
-      "items": ["Multimedia retrieval", "RAG-style pipelines", "Audio-text alignment", "Symbolic music (ABC/MIDI)", "Waveform modeling", "Music understanding & generation"]
+      "items": ["Multimedia retrieval", "RAG-style pipelines", "FAISS", "Audio-text alignment", "Symbolic music (ABC/MIDI)", "Waveform modeling", "Music understanding & generation"]
     },
     {
       "group": "Systems / Engineering",

@@ -22,6 +22,9 @@ function icon(name) {
     external: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path fill="currentColor" d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>',
     email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>',
     phone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.8 21 3 12.2 3 1c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg>'
+    ,
+    moon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 14.6A8.5 8.5 0 0 1 9.4 3a7 7 0 1 0 11.6 11.6z"/></svg>',
+    sun: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm10-9a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM5 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm14.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zM7.76 17.66a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zm11.31 1.41a1 1 0 0 1-1.41 0l-1.41-1.41a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41zM7.76 6.34a1 1 0 0 1-1.41 0L4.94 4.93a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41z"/></svg>'
   };
   return icons[name] || icons.external;
 }
@@ -52,24 +55,22 @@ function renderTimeline(items, mountId) {
   mount.innerHTML = '';
 
   for (const it of items) {
-    const header = it.school
-      ? `${it.school} · ${it.degree}`
-      : it.title;
-    const meta = it.school
-      ? `${it.dates}${it.location ? ' · ' + it.location : ''}`
-      : `${it.dates}${it.location ? ' · ' + it.location : ''}`;
+    const title = it.school ? it.school : it.title;
+    const sub = it.school ? it.degree : '';
+    const right = `${it.dates}${it.location ? ' · ' + it.location : ''}`;
 
-    const details = (it.details || it.highlights || []).map(x => el('li', {}, [x]));
+    const bullets = (it.details || it.highlights || []).map(x => el('li', {}, [x]));
 
     mount.appendChild(
-      el('div', { class: 'card timeline__item' }, [
-        el('div', { class: 'timeline__top' }, [
-          el('div', { class: 'timeline__title' }, [header]),
-          el('div', { class: 'timeline__meta' }, [meta])
+      el('div', { class: 'card timelineItem' }, [
+        el('div', { class: 'timelineItem__top' }, [
+          el('div', {}, [
+            el('div', { class: 'timelineItem__title' }, [title]),
+            sub ? el('div', { class: 'timelineItem__sub' }, [sub]) : el('div')
+          ]),
+          el('div', { class: 'timelineItem__dates' }, [right])
         ]),
-        details.length
-          ? el('ul', { class: 'list' }, details)
-          : el('div')
+        bullets.length ? el('ul', { class: 'timelineItem__bullets' }, bullets) : el('div')
       ])
     );
   }
@@ -83,24 +84,22 @@ function renderPublications(pubs) {
     const links = (p.links || []).map(l => {
       const isHttp = l.url.startsWith('http');
       return el('a', {
-        class: 'pub__link',
+        class: 'chip',
         href: l.url,
         target: isHttp ? '_blank' : undefined,
         rel: isHttp ? 'noreferrer' : undefined
       }, [
-        el('span', { class: 'pub__linkIco', html: icon(isHttp ? 'external' : 'link') }),
-        el('span', {}, [l.label])
+        el('span', { html: icon(isHttp ? 'external' : 'link') }),
+        l.label
       ]);
     });
 
     mount.appendChild(
-      el('article', { class: 'card pub' }, [
-        el('div', { class: 'pub__top' }, [
-          el('h3', { class: 'pub__title' }, [p.title]),
-          el('div', { class: 'pub__meta' }, [`${p.venue} · ${p.year}`])
-        ]),
-        el('div', { class: 'pub__authors' }, [p.authors]),
-        links.length ? el('div', { class: 'pub__links' }, links) : el('div')
+      el('article', { class: 'card' }, [
+        el('h3', { class: 'card__title' }, [p.title]),
+        el('div', { class: 'card__meta' }, [`${p.venue} · ${p.year}`]),
+        el('div', { class: 'card__meta' }, [p.authors]),
+        links.length ? el('div', { class: 'card__links' }, links) : el('div')
       ])
     );
   }
@@ -112,9 +111,9 @@ function renderSkills(groups) {
 
   for (const g of groups) {
     mount.appendChild(
-      el('div', { class: 'card skill' }, [
-        el('div', { class: 'skill__title' }, [g.group]),
-        el('div', { class: 'skill__items' }, g.items.map(x => el('span', { class: 'chip' }, [x])))
+      el('div', { class: 'card' }, [
+        el('h3', { class: 'skillGroup__title' }, [g.group]),
+        el('div', { class: 'skillGroup__items' }, g.items.map(x => el('span', { class: 'tag' }, [x])))
       ])
     );
   }
@@ -126,9 +125,11 @@ function renderHonors(items) {
 
   for (const h of items) {
     mount.appendChild(
-      el('div', { class: 'card honor' }, [
-        el('div', { class: 'honor__title' }, [h.title]),
-        el('div', { class: 'honor__meta' }, [`${h.org} · ${h.year}`])
+      el('div', { class: 'card' }, [
+        el('div', { class: 'honorRow' }, [
+          el('div', { class: 'honorRow__left' }, [h.title]),
+          el('div', { class: 'honorRow__right' }, [`${h.org} · ${h.year}`])
+        ])
       ])
     );
   }
@@ -148,6 +149,30 @@ function setupNav() {
     menu.classList.remove('is-open');
     btn.setAttribute('aria-expanded', 'false');
   }));
+}
+
+function setupThemeToggle() {
+  const btn = qs('#themeToggle');
+  if (!btn) return;
+
+  const root = document.documentElement;
+
+  const apply = (theme) => {
+    const t = theme === 'dark' ? 'dark' : 'light';
+    root.dataset.theme = t;
+    localStorage.setItem('theme', t);
+    btn.innerHTML = t === 'dark'
+      ? `${icon('sun')}<span>Light</span>`
+      : `${icon('moon')}<span>Dark</span>`;
+    btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  };
+
+  const saved = localStorage.getItem('theme');
+  apply(saved === 'dark' ? 'dark' : 'light');
+
+  btn.addEventListener('click', () => {
+    apply(root.dataset.theme === 'dark' ? 'light' : 'dark');
+  });
 }
 
 function setupPubTabs(all) {
@@ -171,6 +196,7 @@ function setupPubTabs(all) {
 
 async function init() {
   setupNav();
+  setupThemeToggle();
 
   try {
     const res = await fetch('assets/data/content.json', { cache: 'no-cache' });
@@ -182,8 +208,18 @@ async function init() {
     qs('#footerYear').textContent = String(new Date().getFullYear());
 
     // Hero
-    qs('#heroName').textContent = `${data.profile.name_en} (${data.profile.name_zh})`;
-    qs('#heroHeadline').textContent = data.profile.headline;
+    const nameHeading = qs('#nameHeading');
+    const nameZh = qs('#nameZh');
+    if (nameHeading && nameZh) {
+      if (nameHeading.childNodes && nameHeading.childNodes.length) {
+        nameHeading.childNodes[0].nodeValue = `${data.profile.name_en} `;
+      } else {
+        nameHeading.textContent = `${data.profile.name_en} `;
+        nameHeading.appendChild(nameZh);
+      }
+      nameZh.textContent = `(${data.profile.name_zh})`;
+    }
+    qs('#headline').textContent = data.profile.headline;
 
     const about = qs('#aboutText');
     about.innerHTML = '';
