@@ -74,6 +74,7 @@ a:hover{color:var(--link-hover); text-decoration:underline}
   box-shadow:var(--shadow);
 }
 .skip:focus{left:12px; top:12px; z-index:99}
+.is-hidden{display:none!important}
 
 .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
 
@@ -162,10 +163,11 @@ html[data-theme="dark"] .nav__toggle{background: rgba(2,6,23,0.55); color: var(-
   display:block;
 }
 .hero__content{padding:4px 0; max-width:85vw;}
-.hero__title{margin:0; font-size:40px; letter-spacing:-0.04em; line-height:1.05}
+.hero__title{margin:0; font-size:30px; letter-spacing:-0.04em; line-height:1.05}
 .hero__subtitle{margin:10px 0 0; color:var(--muted); font-weight:600}
 .hero__about{margin:18px 0 0; color:var(--text); font-size:15px; line-height:1.6}
 .hero__about p{margin:0 0 10px}
+.hero__sectionTitle{margin:14px 0 6px; font-size:14px; letter-spacing:-0.01em}
 .hero__links{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
 
 .pill{
@@ -343,11 +345,26 @@ html[data-theme="dark"] .eduLogo { background: rgba(0,0,0,0.2); }
 .eduProg__details { margin: 6px 0 0 18px; color: var(--muted); }
 
 /* Links: two rows with a visual break */
-.linksRow { display: flex; flex-wrap: wrap; gap: 10px; }
+.linksRow { display: flex; flex-wrap: wrap; gap: 10px; align-items:center; }
+.linksRow--icons { gap: 8px; }
 .linksBreak { height: 10px; }
 
-/* Copy pill: do not show external icon semantics */
-.pill--copy .pill__ext { opacity: 0.9; }
+/* Icon-only links */
+.linkIcon{
+  width:36px;
+  height:36px;
+  border-radius:12px;
+  border:1px solid var(--card-border);
+  display:grid;
+  place-items:center;
+  background:var(--card);
+  color:var(--text);
+  cursor:pointer;
+  transition:transform 120ms ease, box-shadow 120ms ease;
+}
+.linkIcon:hover{transform:translateY(-1px); box-shadow:var(--shadow);}
+.linkIcon__ico svg{width:18px; height:18px;}
+.linkIcon--copy{border-style:dashed;}
 
 /* Toast */
 .toast {

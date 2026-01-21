@@ -23,7 +23,11 @@ function icon(name) {
     email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>',
     copy: '<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z\"/></svg>',
     moon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 14.6A8.5 8.5 0 0 1 9.4 3a7 7 0 1 0 11.6 11.6z"/></svg>',
-    sun: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm10-9a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM5 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm14.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zM7.76 17.66a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zm11.31 1.41a1 1 0 0 1-1.41 0l-1.41-1.41a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41zM7.76 6.34a1 1 0 0 1-1.41 0L4.94 4.93a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41z"/></svg>'
+    sun: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm10-9a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM5 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm14.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zM7.76 17.66a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zm11.31 1.41a1 1 0 0 1-1.41 0l-1.41-1.41a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41zM7.76 6.34a1 1 0 0 1-1.41 0L4.94 4.93a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41z"/></svg>',
+    github: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.72 1.26 3.38.96.1-.75.41-1.26.74-1.55-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.19a11 11 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.65.23 2.87.12 3.17.75.81 1.2 1.85 1.2 3.11 0 4.45-2.71 5.42-5.29 5.71.42.37.8 1.1.8 2.22 0 1.6-.01 2.9-.01 3.29 0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.25c0-1.25-.02-2.85-1.74-2.85-1.74 0-2 1.36-2 2.76v5.34H9.61V9h3.41v1.56h.05c.47-.9 1.62-1.85 3.33-1.85 3.56 0 4.22 2.34 4.22 5.38v6.36zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>',
+    scholar: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7l10 5 8-4.07V13a5 5 0 1 1-10 0V9.83L4 7.2v4.65a8 8 0 1 0 16 0V7L12 2zm0 0"/></svg>',
+    xhs: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3h4l4 18H8l-4-18zm12 0h4l-4 18h-4l4-18z"/></svg>'
   };
   return icons[name] || icons.external;
 }
@@ -36,34 +40,38 @@ function renderLinks(profile) {
   const openLinks = profile?.links_open || [];
   const copyLinks = profile?.links_copy || [];
 
-  const rowOpen = el('div', { class: 'linksRow' });
+  const getLinkIcon = (l) => {
+    const lower = (l.label || '').toLowerCase();
+    const url = String(l.url || '').toLowerCase();
+    if (lower.includes('github') || url.includes('github')) return 'github';
+    if (lower.includes('linkedin') || url.includes('linkedin')) return 'linkedin';
+    if (lower.includes('scholar') || url.includes('scholar.google')) return 'scholar';
+    if (lower.includes('xiaohongshu') || lower.includes('xhs')) return 'xhs';
+    if (lower.includes('email') || url.startsWith('mailto:')) return 'email';
+    return 'link';
+  };
+
+  const rowOpen = el('div', { class: 'linksRow linksRow--icons' });
   for (const l of openLinks) {
-    const ico = 'link';
+    const ico = getLinkIcon(l);
     const a = el('a', {
-      class: 'pill',
+      class: 'linkIcon',
       href: l.url,
       target: '_blank',
-      rel: 'noreferrer'
-    }, [
-      el('span', { class: 'pill__ico', html: icon(ico) }),
-      el('span', {}, [l.label]),
-      el('span', { class: 'pill__ext', html: icon('external') })
-    ]);
+      rel: 'noreferrer',
+      'aria-label': l.label
+    }, [el('span', { class: 'linkIcon__ico', html: icon(ico) })]);
     rowOpen.appendChild(a);
   }
 
-  const rowCopy = el('div', { class: 'linksRow' });
+  const rowCopy = el('div', { class: 'linksRow linksRow--icons' });
   for (const l of copyLinks) {
     const btn = el('button', {
-      class: 'pill pill--copy',
+      class: 'linkIcon linkIcon--copy',
       type: 'button',
       'data-copy': l.copy || '',
       'data-toast': l.toast || 'Copied'
-    }, [
-      el('span', { class: 'pill__ico', html: icon('copy') }),
-      el('span', {}, [l.label]),
-      el('span', { class: 'pill__ext', html: icon('copy') })
-    ]);
+    }, [el('span', { class: 'linkIcon__ico', html: icon('copy') })]);
     rowCopy.appendChild(btn);
   }
 
@@ -387,12 +395,21 @@ async function init() {
       }
       nameZh.textContent = `(${data.profile.name_zh})`;
     }
-    qs('#headline').textContent = data.profile.headline;
+
+    const headlineNode = qs('#headline');
+    if (headlineNode) {
+      headlineNode.textContent = '';
+      headlineNode.classList.add('is-hidden');
+    }
 
     const about = qs('#aboutText');
     about.innerHTML = '';
     for (const p of data.profile.about || []) {
       about.appendChild(el('p', {}, [p]));
+    }
+    if (data.profile.headline) {
+      about.appendChild(el('h3', { class: 'hero__sectionTitle' }, ['Research Interests']));
+      about.appendChild(el('p', { class: 'hero__headline' }, [data.profile.headline]));
     }
 
     // Photo fallback
