@@ -2,7 +2,7 @@
   "profile": {
     "name_en": "Teng Tu",
     "name_zh": "涂腾",
-    "headline": "Multimodal Language Models · Multimedia Retrieval · Music-Language Modeling",
+    "headline": "Multimodal Language Models · Multimedia Retrieval · Diffusion Model",
     "location": "Singapore",
     "photo": {
       "src": "assets/img/profile.png",
@@ -10,8 +10,8 @@
       "alt": "Profile photo"
     },
     "about": [
-      "Hi! I'm Teng Tu (涂腾), a Ph.D. student at the National University of Singapore. My research spans multimodal language models and multimedia information retrieval, with ongoing work on music-language modeling that unifies symbolic and waveform representations.",
-      "Outside of research, I enjoy travel photography, building small creative demos, and writing."
+      "Hi! I'm Teng Tu (涂腾), a Ph.D. student at the National University of Singapore, advised by Prof. Tat-Seng Chua. My research sits at the intersection of generative modeling, multimodal retrieval, and representation learning. Recently, I focus on diffusion language models: via distillation, flow-based learning, and trajectory planning to move beyond similarity-based alignment, and to learn representations with stronger spatial grounding, richer relationships, and causal structure, leading to more trustworthy outputs. ",
+      "Outside of research, you'll often find me traveling, taking photos, cooking, or writing stage-play scripts."
     ],
     "links_open": [
       {
@@ -97,13 +97,14 @@
         {
           "degree": "Ph.D. in Integrative Sciences and Engineering",
           "dates": "Aug 2025 - Present",
-          "details": []
+          "details": [
+          ]
         },
         {
           "degree": "M.Sc. in Computing (Artificial Intelligence)",
           "dates": "Aug 2023 - Jan 2025",
           "details": [
-            "Supervisor: Prof. Tat-Seng Chua"
+            "Advisor: Prof. Tat-Seng Chua"
           ]
         }
       ]
@@ -116,7 +117,7 @@
           "degree": "B.Sc. in Computer Science and Technology",
           "dates": "Sep 2019 - Jun 2023",
           "details": [
-            "Advisor: Prof. Jie Tang"
+            "Advisor: Prof. Jie Tang, Prof. Bin Xu"
           ]
         }
       ]
