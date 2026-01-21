@@ -272,11 +272,17 @@ function renderHonors(items) {
   mount.innerHTML = '';
 
   for (const h of items || []) {
+    const title = h.title || h.name || 'Honor';
+    const rightParts = [];
+    if (h.org) rightParts.push(h.org);
+    if (h.year) rightParts.push(h.year);
+    const right = rightParts.join(' · ');
+
     mount.appendChild(
       el('div', { class: 'card' }, [
         el('div', { class: 'honorRow' }, [
-          el('div', { class: 'honorRow__left' }, [h.title]),
-          el('div', { class: 'honorRow__right' }, [`${h.org} · ${h.year}`])
+          el('div', { class: 'honorRow__left' }, [title]),
+          el('div', { class: 'honorRow__right' }, [right])
         ])
       ])
     );
@@ -338,16 +344,16 @@ async function init() {
   setupThemeToggle();
 
   try {
-let data;
-try {
-  const res = await fetch('data.json', { cache: 'no-cache' });
-  if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
-  data = await res.json();
-} catch (e) {
-  const res = await fetch('assets/data/content.json', { cache: 'no-cache' });
-  if (!res.ok) throw new Error(`Failed to load content.json: ${res.status}`);
-  data = await res.json();
-}
+    let data;
+    try {
+      const res = await fetch('data.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
+      data = await res.json();
+    } catch (e) {
+      const res = await fetch('assets/data/content.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`Failed to load content.json: ${res.status}`);
+      data = await res.json();
+    }
 
     // Header / footer name
     qs('#brandName').textContent = data.profile.name_en;

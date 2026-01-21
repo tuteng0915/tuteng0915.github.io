@@ -5,8 +5,8 @@
     "headline": "Multimodal Language Models · Multimedia Retrieval · Music-Language Modeling",
     "location": "Singapore",
     "photo": {
-      "src": "assets/img/profile.jpg",
-      "placeholder": "assets/img/profile-placeholder.svg",
+      "src": "assets/img/profile.png",
+      "placeholder": "assets/img/profile.png",
       "alt": "Profile photo"
     },
     "about": [
@@ -35,7 +35,7 @@
       },
       {
         "label": "WeChat",
-        "copy": "WECHAT_ID_HERE",
+        "copy": "TT-20000915-tuteng",
         "toast": "WeChat ID copied"
       },
       {
@@ -51,7 +51,7 @@
       "venue": "MMM 2026",
       "year": 2026,
       "authors": "Teng Tu, Xiaohao Liu, Yunshan Ma, Ji Qi, Tat-Seng Chua",
-      "pdf": "MMM_26_UniMuLM.pdf"
+      "pdf": "UniMuLM_MMM2026.pdf"
     },
     {
       "title": "MusicSem: A Semantically Rich Language-Audio Dataset of Organic Musical Discourse",
@@ -59,6 +59,13 @@
       "year": 2025,
       "authors": "Rebecca Salganik, Teng Tu, Fei-Yueh Chen, Xiaohao Liu, Yunshan Ma, Diyi Yang, Guillaume Salha-Galvan, Anson Kahng, Jian Kang",
       "pdf": "MusicSem.pdf"
+    },
+    {
+      "title": "Enhancing Dynamics Modeling in Video-to-Music Generation",
+      "venue": "Under Review",
+      "year": 2024,
+      "authors": "Xiaohao Liu, Teng Tu, Yunshan Ma, Tat-Seng Chua",
+      "pdf": "DyViM.pdf"
     },
     {
       "title": "ContextCam: Bridging Context Awareness with Creative Human-AI Image Co-Creation",
@@ -80,13 +87,6 @@
       "year": 2021,
       "authors": "Zhengxiao Du, Chang Zhou, Jiangchao Yao, Teng Tu, Letian Cheng, Hongxia Yang, Jingren Zhou",
       "pdf": "CogKR_TKDE2021.pdf"
-    },
-    {
-      "title": "Enhancing Dynamics Modeling in Video-to-Music Generation",
-      "venue": "Under Review",
-      "year": 2024,
-      "authors": "Xiaohao Liu, Teng Tu, Yunshan Ma, Tat-Seng Chua",
-      "pdf": "DyViM_UnderReview.pdf"
     }
   ],
   "education": [
@@ -127,7 +127,7 @@
       {
         "org": "NExT++ Research Center, National University of Singapore",
         "role": "Research Intern",
-        "dates": "Jan 2024 – Present",
+        "dates": "Jan 2024 - Present",
         "focus": "Multi-Modal Language Model, Multimedia Information Retrieval",
         "projects": [
           {
@@ -153,7 +153,7 @@
       {
         "org": "Knowledge Engineering Group (KEG), Tsinghua University",
         "role": "Research Intern",
-        "dates": "Nov 2020 – Jun 2023",
+        "dates": "Nov 2020 - Jun 2023",
         "focus": "NLP, Multimodal Information Processing, Knowledge Graphs",
         "projects": [
           {
@@ -190,7 +190,7 @@
       {
         "org": "ZhipuAI",
         "role": "MultiModal Intern",
-        "dates": "Jun 2023 – Sep 2023",
+        "dates": "Jun 2023 - Sep 2023",
         "bullets": [
           "Revised and enhanced the Visual Tokenizer for adaptive aspect ratio across a suite of products.",
           "Assisted in drafting four patents for the company's technologies."
@@ -199,7 +199,7 @@
       {
         "org": "Kuaishou",
         "role": "Artificial Intelligence Intern",
-        "dates": "Jun 2022 – Aug 2022",
+        "dates": "Jun 2022 - Aug 2022",
         "bullets": [
           "Utilized multi-modal knowledge graphs and sequence annotation, along with entity disambiguation and text matching technologies, to retrieve knowledge-based video for natural language queries."
         ]
@@ -207,7 +207,7 @@
       {
         "org": "Fourth Paradigm",
         "role": "Natural Language Processing Intern",
-        "dates": "Jul 2021 – Aug 2021",
+        "dates": "Jul 2021 - Aug 2021",
         "bullets": [
           "Explored advanced solutions for knowledge extraction and graph link prediction in academia and industry.",
           "Offered technical insights and user experience enhancements for graph products."
@@ -227,28 +227,25 @@
   ],
   "skills": [
     {
-      "group": "AI/ML",
+      "group": "ML & AI",
       "items": [
         "PyTorch",
-        "TensorFlow",
         "DeepSpeed",
         "Hugging Face",
-        "Numpy",
         "Pandas",
         "FAISS",
         "vLLM"
       ]
     },
     {
-      "group": "Web",
+      "group": "Web & Demo",
       "items": [
-        "HTML",
-        "CSS",
-        "JavaScript",
+        "HTML/CSS/JS",
+        "Vue",
         "React",
         "Django",
         "Gradio",
-        "nginx"
+        "Nginx"
       ]
     },
     {
@@ -259,17 +256,18 @@
         "Photoshop",
         "Lightroom",
         "Premiere",
-        "Adobe Illustrator"
+        "Illustrator"
       ]
     },
     {
-      "group": "Miscellaneous",
+      "group": "Systems",
       "items": [
         "Git",
         "Shell",
         "Docker",
         "MySQL",
-        "LaTeX"
+        "LaTeX",
+        "Slurm"
       ]
     }
   ]
