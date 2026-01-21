@@ -21,35 +21,85 @@ function icon(name) {
     link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10.6 13.4a1 1 0 0 0 1.4 1.4l4.95-4.95a3 3 0 0 0-4.24-4.24l-2.12 2.12a1 1 0 1 0 1.42 1.42l2.12-2.12a1 1 0 0 1 1.4 1.4l-4.95 4.95z"/><path fill="currentColor" d="M13.4 10.6a1 1 0 0 0-1.4-1.4L7.05 14.15a3 3 0 0 0 4.24 4.24l2.12-2.12a1 1 0 1 0-1.42-1.42l-2.12 2.12a1 1 0 0 1-1.4-1.4l4.95-4.95z"/></svg>',
     external: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path fill="currentColor" d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>',
     email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>',
+    copy: '<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z\"/></svg>',
     moon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 14.6A8.5 8.5 0 0 1 9.4 3a7 7 0 1 0 11.6 11.6z"/></svg>',
     sun: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm10-9a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM5 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm14.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zM7.76 17.66a1 1 0 0 1 0 1.41l-1.41 1.41a1 1 0 1 1-1.41-1.41l1.41-1.41a1 1 0 0 1 1.41 0zm11.31 1.41a1 1 0 0 1-1.41 0l-1.41-1.41a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41zM7.76 6.34a1 1 0 0 1-1.41 0L4.94 4.93a1 1 0 1 1 1.41-1.41l1.41 1.41a1 1 0 0 1 0 1.41z"/></svg>'
   };
   return icons[name] || icons.external;
 }
 
-function renderLinks(links) {
+function renderLinks(profile) {
   const container = qs('#quickLinks');
   if (!container) return;
   container.innerHTML = '';
 
-  for (const l of links || []) {
-    const lower = String(l.label || '').toLowerCase();
-    const ico = lower.includes('email') ? 'email' : 'link';
-    const isHttp = String(l.url || '').startsWith('http');
+  const openLinks = profile?.links_open || [];
+  const copyLinks = profile?.links_copy || [];
 
+  const rowOpen = el('div', { class: 'linksRow' });
+  for (const l of openLinks) {
+    const ico = 'link';
     const a = el('a', {
       class: 'pill',
       href: l.url,
-      target: isHttp ? '_blank' : undefined,
-      rel: isHttp ? 'noreferrer' : undefined
+      target: '_blank',
+      rel: 'noreferrer'
     }, [
       el('span', { class: 'pill__ico', html: icon(ico) }),
       el('span', {}, [l.label]),
       el('span', { class: 'pill__ext', html: icon('external') })
     ]);
-
-    container.appendChild(a);
+    rowOpen.appendChild(a);
   }
+
+  const rowCopy = el('div', { class: 'linksRow' });
+  for (const l of copyLinks) {
+    const btn = el('button', {
+      class: 'pill pill--copy',
+      type: 'button',
+      'data-copy': l.copy || '',
+      'data-toast': l.toast || 'Copied'
+    }, [
+      el('span', { class: 'pill__ico', html: icon('copy') }),
+      el('span', {}, [l.label]),
+      el('span', { class: 'pill__ext', html: icon('copy') })
+    ]);
+    rowCopy.appendChild(btn);
+  }
+
+  container.appendChild(rowOpen);
+  container.appendChild(el('div', { class: 'linksBreak', 'aria-hidden': 'true' }));
+  container.appendChild(rowCopy);
+
+  // Wire copy behavior
+  qsa('[data-copy]', container).forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.getAttribute('data-copy') || '';
+      const msg = btn.getAttribute('data-toast') || 'Copied';
+      if (!text) {
+        toast('Nothing to copy');
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(text);
+        toast(msg);
+      } catch (e) {
+        // Fallback
+        const ta = el('textarea', { style: 'position:fixed;left:-9999px;top:-9999px;' }, [text]);
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try {
+          document.execCommand('copy');
+          toast(msg);
+        } catch (e2) {
+          toast('Copy failed');
+        } finally {
+          ta.remove();
+        }
+      }
+    });
+  });
 }
 
 function renderTimeline(items, mountId) {
@@ -78,6 +128,41 @@ function renderTimeline(items, mountId) {
     );
   }
 }
+
+function renderEducation(schools) {
+  const mount = qs('#eduList');
+  if (!mount) return;
+  mount.innerHTML = '';
+
+  for (const s of schools || []) {
+    const logo = s.logo || '';
+    const logoNode = logo
+      ? el('img', { class: 'eduLogo__img', src: logo, alt: `${s.school} logo`, loading: 'lazy' })
+      : el('div', { class: 'eduLogo__placeholder' }, ['Logo']);
+
+    const programs = (s.programs || []).map(p => {
+      const details = (p.details || []).filter(Boolean).map(d => el('li', {}, [d]));
+      return el('div', { class: 'eduProg' }, [
+        el('div', { class: 'eduProg__top' }, [
+          el('div', { class: 'eduProg__degree' }, [p.degree]),
+          el('div', { class: 'eduProg__dates' }, [p.dates])
+        ]),
+        details.length ? el('ul', { class: 'eduProg__details' }, details) : el('div')
+      ]);
+    });
+
+    mount.appendChild(
+      el('article', { class: 'card eduCard' }, [
+        el('div', { class: 'eduCard__head' }, [
+          el('div', { class: 'eduLogo' }, [logoNode]),
+          el('div', { class: 'eduCard__school' }, [s.school])
+        ]),
+        el('div', { class: 'eduCard__body' }, programs)
+      ])
+    );
+  }
+}
+
 
 function renderPublications(pubs) {
   const mount = qs('#pubList');
@@ -238,13 +323,31 @@ function setupThemeToggle() {
   });
 }
 
+function toast(message) {
+  const t = qs('#toast');
+  if (!t) return;
+  t.textContent = message;
+  t.classList.add('is-visible');
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => t.classList.remove('is-visible'), 1400);
+}
+
+
 async function init() {
   setupNav();
   setupThemeToggle();
 
   try {
-    const res = await fetch('assets/data/content.json', { cache: 'no-cache' });
-    const data = await res.json();
+let data;
+try {
+  const res = await fetch('data.json', { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
+  data = await res.json();
+} catch (e) {
+  const res = await fetch('assets/data/content.json', { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`Failed to load content.json: ${res.status}`);
+  data = await res.json();
+}
 
     // Header / footer name
     qs('#brandName').textContent = data.profile.name_en;
@@ -282,11 +385,11 @@ async function init() {
       };
     }
 
-    renderLinks(data.profile.links);
+    renderLinks(data.profile);
 
     // Sections
     renderPublications(data.publications);
-    renderTimeline(data.education, '#eduList');
+    renderEducation(data.education);
     renderExperience(data.experience);
     renderSkills(data.skills);
     renderHonors(data.honors);

@@ -1,12 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teng Tu (涂腾)</title>
   <meta name="description" content="Teng Tu (涂腾) — Multimodal Language Models, Multimedia Retrieval, Music-Language Modeling." />
-  <!-- Use the repository root favicon.ico (do not override a user-provided favicon) -->
-  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -34,14 +32,13 @@
 
   <main id="main">
     <section class="hero" id="about">
-      <div class="container hero__inner">
-        <div class="hero__photo">
-          <img id="profilePhoto" alt="Profile photo" loading="lazy" />
-          <div class="hero__photoHint">Drop your photo at <code>assets/img/profile.jpg</code></div>
-        </div>
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="hero__photoWrap" aria-hidden="true">
+            <img id="profilePhoto" class="hero__photo" alt="Profile photo" />
+          </div>
 
-        <div class="hero__content">
-          <h1 class="hero__title" id="nameHeading">Teng Tu <span class="hero__zh" id="nameZh">(涂腾)</span></h1>
+          <h1 class="hero__title" id="nameHeading">Teng Tu <span id="nameZh">(涂腾)</span></h1>
           <p class="hero__headline" id="headline">Multimodal Language Models · Multimedia Retrieval · Music-Language Modeling</p>
 
           <div class="hero__about" id="aboutText"></div>
@@ -62,7 +59,7 @@
     <section class="section" id="education">
       <div class="container">
         <h2>Education</h2>
-        <div class="timeline" id="eduList"></div>
+        <div class="eduGrid" id="eduList"></div>
       </div>
     </section>
 
@@ -95,6 +92,8 @@
       </div>
     </footer>
   </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <script src="assets/js/main.js" defer></script>
 </body>
