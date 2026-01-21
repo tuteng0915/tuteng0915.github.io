@@ -67,11 +67,15 @@ function renderLinks(profile) {
   const rowCopy = el('div', { class: 'linksRow linksRow--icons' });
   for (const l of copyLinks) {
     const btn = el('button', {
-      class: 'linkIcon linkIcon--copy',
+      class: 'pill pill--copy',
       type: 'button',
       'data-copy': l.copy || '',
       'data-toast': l.toast || 'Copied'
-    }, [el('span', { class: 'linkIcon__ico', html: icon('copy') })]);
+    }, [
+      el('span', { class: 'pill__ico', html: icon('copy') }),
+      el('span', {}, [l.label]),
+      el('span', { class: 'pill__ext', html: icon('copy') })
+    ]);
     rowCopy.appendChild(btn);
   }
 

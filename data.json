@@ -11,7 +11,7 @@
     },
     "about": [
       "Hi! I'm Teng Tu (涂腾), a Ph.D. student at the National University of Singapore, advised by Prof. Tat-Seng Chua. My research sits at the intersection of generative modeling, multimodal retrieval, and representation learning. Recently, I focus on diffusion language models: via distillation, flow-based learning, and trajectory planning to move beyond similarity-based alignment, and to learn representations with stronger spatial grounding, richer relationships, and causal structure, leading to more trustworthy outputs.",
-      " Outside of research, you'll often find me traveling, taking photos, cooking, or writing stage-play scripts."
+      "Outside of research, I enjoy traveling, taking photos, cooking, or writing stage-play scripts."
     ],
     "links_open": [
       {
