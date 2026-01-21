@@ -2,7 +2,7 @@
   --bg: #ffffff;
   --text: #0f172a;
   --muted: #475569;
-  --bold: #0f3b8c;
+  --bold: #0a2f8a;
   --card: rgba(255,255,255,0.72);
   --card-border: rgba(15,23,42,0.10);
   --border: rgba(15,23,42,0.10);
@@ -20,7 +20,7 @@ html[data-theme="dark"]{
   --bg: #0b1220;
   --text: #e5e7eb;
   --muted: #94a3b8;
-  --bold: #8ab4ff;
+  --bold: #c4dcff;
   --card: rgba(2,6,23,0.58);
   --card-border: rgba(148,163,184,0.20);
   --border: rgba(148,163,184,0.20);
@@ -165,11 +165,11 @@ html[data-theme="dark"] .nav__toggle{background: rgba(2,6,23,0.55); color: var(-
   display:block;
 }
 .hero__content{padding:4px 0; max-width:92vw;}
-.hero__title{margin:0; font-size:30px; letter-spacing:-0.04em; line-height:1.05; color:var(--bold)}
+.hero__title{margin:0; font-size:30px; letter-spacing:-0.04em; line-height:1.05; color:var(--text)}
 .hero__subtitle{margin:10px 0 0; color:var(--muted); font-weight:600}
 .hero__about{margin:18px 0 0; color:var(--text); font-size:15px; line-height:1.6}
 .hero__about p{margin:0 0 10px}
-.hero__sectionTitle{margin:14px 0 6px; font-size:14px; letter-spacing:-0.01em}
+.hero__sectionTitle{margin:14px 0 6px; font-size:14px; letter-spacing:-0.01em; color:var(--bold)}
 .hero__links{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
 
 .pill{
@@ -354,8 +354,8 @@ html[data-theme="dark"] .eduLogo { background: rgba(0,0,0,0.2); }
 
 /* Icon-only links */
 .linkIcon{
-  width:36px;
-  height:36px;
+  width:40px;
+  height:40px;
   border-radius:12px;
   border:1px solid var(--card-border);
   display:grid;
@@ -366,7 +366,7 @@ html[data-theme="dark"] .eduLogo { background: rgba(0,0,0,0.2); }
   transition:transform 120ms ease, box-shadow 120ms ease;
 }
 .linkIcon:hover{transform:translateY(-1px); box-shadow:var(--shadow);}
-.linkIcon__ico svg{width:18px; height:18px;}
+.linkIcon__ico svg{width:20px; height:20px;}
 .linkIcon--copy{border-style:dashed;}
 
 /* Toast */
