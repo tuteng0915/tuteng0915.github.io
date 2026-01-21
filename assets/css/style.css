@@ -140,7 +140,7 @@ html[data-theme="dark"] .nav__toggle{background: rgba(2,6,23,0.55); color: var(-
 .hero__photoWrap{
   position:relative;
   width:100%;
-  max-width:320px;
+  max-width:200px;
   border-radius:var(--radius);
   overflow:hidden;
   border:1px solid var(--card-border);
@@ -151,7 +151,7 @@ html[data-theme="dark"] .nav__toggle{background: rgba(2,6,23,0.55); color: var(-
   width:100%;
   aspect-ratio: 4 / 5;
   height:auto;
-  max-height:320px;
+  max-height:280px;
   object-fit:cover;
   display:block;
 }
