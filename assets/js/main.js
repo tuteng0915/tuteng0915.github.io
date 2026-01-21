@@ -203,9 +203,16 @@ function renderExperience(exp) {
   };
 
   const renderResearchOrg = (e) => {
+    const logo = e.logo
+      ? el('img', { class: 'expLogo', src: e.logo, alt: `${e.org} logo`, loading: 'lazy' })
+      : null;
+
     const top = el('div', { class: 'expOrg__top' }, [
       el('div', { class: 'expOrg__title' }, [`${e.role} at ${e.org}`]),
-      el('div', { class: 'expOrg__dates' }, [e.dates])
+      el('div', { class: 'expOrg__right' }, [
+        logo || el('div'),
+        el('div', { class: 'expOrg__dates' }, [e.dates])
+      ])
     ]);
 
     const focus = e.focus
@@ -230,9 +237,16 @@ function renderExperience(exp) {
   };
 
   const renderInternship = (e) => {
+    const logo = e.logo
+      ? el('img', { class: 'expLogo', src: e.logo, alt: `${e.org} logo`, loading: 'lazy' })
+      : null;
+
     const top = el('div', { class: 'expOrg__top' }, [
       el('div', { class: 'expOrg__title' }, [`${e.role} at ${e.org}`]),
-      el('div', { class: 'expOrg__dates' }, [e.dates])
+      el('div', { class: 'expOrg__right' }, [
+        logo || el('div'),
+        el('div', { class: 'expOrg__dates' }, [e.dates])
+      ])
     ]);
 
     const bullets = el('ul', { class: 'expBullets' }, (e.bullets || []).map(b => el('li', {}, [b])));
@@ -271,7 +285,8 @@ function renderHonors(items) {
   if (!mount) return;
   mount.innerHTML = '';
 
-  for (const h of items || []) {
+  const honors = items || [];
+  for (const h of honors) {
     const title = h.title || h.name || 'Honor';
     const rightParts = [];
     if (h.org) rightParts.push(h.org);
@@ -282,7 +297,7 @@ function renderHonors(items) {
       el('div', { class: 'card' }, [
         el('div', { class: 'honorRow' }, [
           el('div', { class: 'honorRow__left' }, [title]),
-          el('div', { class: 'honorRow__right' }, [right])
+          right ? el('div', { class: 'honorRow__right' }, [right]) : el('div')
         ])
       ])
     );

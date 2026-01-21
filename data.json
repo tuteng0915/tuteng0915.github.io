@@ -10,7 +10,7 @@
       "alt": "Profile photo"
     },
     "about": [
-      "Hi! I’m Teng Tu (涂腾), a Ph.D. student at the National University of Singapore. My research spans multimodal language models and multimedia information retrieval, with ongoing work on music-language modeling that unifies symbolic and waveform representations.",
+      "Hi! I'm Teng Tu (涂腾), a Ph.D. student at the National University of Singapore. My research spans multimodal language models and multimedia information retrieval, with ongoing work on music-language modeling that unifies symbolic and waveform representations.",
       "Outside of research, I enjoy travel photography, building small creative demos, and writing."
     ],
     "links_open": [
@@ -92,16 +92,16 @@
   "education": [
     {
       "school": "National University of Singapore, Singapore",
-      "logo": "",
+      "logo": "assets/img/nus.png",
       "programs": [
         {
           "degree": "Ph.D. in Integrative Sciences and Engineering",
-          "dates": "Aug 2025 – Present",
+          "dates": "Aug 2025 - Present",
           "details": []
         },
         {
           "degree": "M.Sc. in Computing (Artificial Intelligence)",
-          "dates": "Aug 2023 – Jan 2025",
+          "dates": "Aug 2023 - Jan 2025",
           "details": [
             "Supervisor: Prof. Tat-Seng Chua"
           ]
@@ -110,11 +110,11 @@
     },
     {
       "school": "Tsinghua University, Beijing, China",
-      "logo": "",
+      "logo": "assets/img/THU.jpg",
       "programs": [
         {
           "degree": "B.Sc. in Computer Science and Technology",
-          "dates": "Sep 2019 – Jun 2023",
+          "dates": "Sep 2019 - Jun 2023",
           "details": [
             "Advisor: Prof. Jie Tang"
           ]
@@ -128,6 +128,7 @@
         "org": "NExT++ Research Center, National University of Singapore",
         "role": "Research Intern",
         "dates": "Jan 2024 - Present",
+        "logo": "assets/img/nextpp.png",
         "focus": "Multi-Modal Language Model, Multimedia Information Retrieval",
         "projects": [
           {
@@ -154,6 +155,7 @@
         "org": "Knowledge Engineering Group (KEG), Tsinghua University",
         "role": "Research Intern",
         "dates": "Nov 2020 - Jun 2023",
+        "logo": "assets/img/THU.jpg",
         "focus": "NLP, Multimodal Information Processing, Knowledge Graphs",
         "projects": [
           {
@@ -191,6 +193,7 @@
         "org": "ZhipuAI",
         "role": "MultiModal Intern",
         "dates": "Jun 2023 - Sep 2023",
+        "logo": "assets/img/zhipu.png",
         "bullets": [
           "Revised and enhanced the Visual Tokenizer for adaptive aspect ratio across a suite of products.",
           "Assisted in drafting four patents for the company's technologies."
@@ -200,6 +203,7 @@
         "org": "Kuaishou",
         "role": "Artificial Intelligence Intern",
         "dates": "Jun 2022 - Aug 2022",
+        "logo": "assets/img/kuaishou.png",
         "bullets": [
           "Utilized multi-modal knowledge graphs and sequence annotation, along with entity disambiguation and text matching technologies, to retrieve knowledge-based video for natural language queries."
         ]
@@ -208,6 +212,7 @@
         "org": "Fourth Paradigm",
         "role": "Natural Language Processing Intern",
         "dates": "Jul 2021 - Aug 2021",
+        "logo": "assets/img/4paradigm.png",
         "bullets": [
           "Explored advanced solutions for knowledge extraction and graph link prediction in academia and industry.",
           "Offered technical insights and user experience enhancements for graph products."
